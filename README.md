@@ -9,27 +9,13 @@ A intent-based conversational chatbot built with **Python, NLTK, and TensorFlow/
 - Response selection from predefined intent responses
 - Softmax Classification and Stochastic Gradient Descent (SGD)
 
-## High-Level Workflow
+## Screenshots
+<img width="1775" height="712" alt="Screenshot 2026-06-19 224803" src="https://github.com/user-attachments/assets/00e91dee-53dc-4d93-a9f3-2583d3aa38ef" />
+<img width="1127" height="512" alt="Screenshot 2026-06-19 224849" src="https://github.com/user-attachments/assets/b4fdd629-b83d-43ea-bcbf-a3c3637da4ba" />
 
-flowchart TD
-    A[intents.json]
-
-    subgraph NLP Pipeline
-        B[Tokenization]
-        C[Lemmatization]
-        D[Bag of Words]
-    end
-
-    subgraph Model
-        E[Feedforward Neural Network]
-        F[Intent Prediction]
-    end
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G[Response Selection]
-    G --> H[Chatbot Reply]
-
+## Future Improvements
+- Replace Bag-of-Words with word embeddings
+- Add context-aware conversations
+- Integrate transformer-based models
+- Build a web interface using Flask or FastAPI
+- Deploy using Docker and cloud services
