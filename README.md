@@ -11,11 +11,25 @@ A intent-based conversational chatbot built with **Python, NLTK, and TensorFlow/
 
 ## High-Level Workflow
 
-```mermaid
 flowchart TD
-    A[intents.json] --> B[Text Preprocessing<br/>Tokenization<br/>Lemmatization]
-    B --> C[Feature Extraction<br/>Bag-of-Words (BoW)]
-    C --> D[Neural Network<br/>Intent Prediction]
-    D --> E[Response Selection]
-    E --> F[Chatbot Reply]
-```
+    A[intents.json]
+
+    subgraph NLP Pipeline
+        B[Tokenization]
+        C[Lemmatization]
+        D[Bag of Words]
+    end
+
+    subgraph Model
+        E[Feedforward Neural Network]
+        F[Intent Prediction]
+    end
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G[Response Selection]
+    G --> H[Chatbot Reply]
+
